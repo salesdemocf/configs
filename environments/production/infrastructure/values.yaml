@@ -1,10 +1,9 @@
-example-voting-app-infra:
-  postgresql:
-    enabled: true
-    auth:
-      postgresPassword: postgres
+postgresql:
+  enabled: true
+  auth:
+    postgresPassword: postgres
 
-  redis:
-    enabled: true
-    auth: 
-      enabled: false
+redis:
+  enabled: true
+  auth: 
+    enabled: false

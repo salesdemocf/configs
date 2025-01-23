@@ -1,6 +1,6 @@
 apiVersion: v2
-description: Helm Chart for Docker Samples example-voting-app
-name: example-voting-app-common
+description: Helm Chart for example-voting-app required infrastructure
+name: example-voting-app-infra
 keywords:
   - codefresh
   - kubernetes
@@ -8,11 +8,21 @@ keywords:
   - infrastructure
 version: 1.2.0
 sources:
-  - https://github.com/salesdemocf/configs/example-voting-app-infra
+  - https://github.com/salesdemocf/configs/charts/example-voting-app-infra
 maintainers:
   - name: Dustin Van Buskirk
     email: dustin@codefresh.io
 dependencies:
-  - name: example-voting-app-infra
-    version: "1.2.0"
-    repository: file://../../../charts/example-voting-app-infra
+  - name: postgresql
+    version: 12.8.2
+    repository: https://charts.bitnami.com/bitnami
+    condition: postgresql.enabled
+    tags:
+      - db
+  - name: redis
+    version: 17.15.2
+    repository: https://charts.bitnami.com/bitnami
+    condition: redis.enabled
+    tags:
+      - queue
+appVersion: 1.2.0
