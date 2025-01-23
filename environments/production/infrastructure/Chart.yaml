@@ -1,6 +1,6 @@
 apiVersion: v2
 description: Helm Chart for Docker Samples example-voting-app
-name: example-voting-app-infra
+name: example-voting-app-common
 keywords:
   - codefresh
   - kubernetes

@@ -1,5 +1,5 @@
 apiVersion: v2
-description: Helm Chart for Docker Samples example-voting-app
+description: Helm Chart for example-voting-app required infrastructure
 name: example-voting-app-infra
 keywords:
   - codefresh
