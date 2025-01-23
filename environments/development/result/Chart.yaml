@@ -15,4 +15,4 @@ maintainers:
 dependencies:
   - name: worker
     version: "1.2.0"
-    repository: file://../../charts/result
+    repository: file://../../../charts/result
