@@ -1,0 +1,4 @@
+vote:
+  image:
+    repository: codedev.jfrog.io/poc-demo-1-docker-local/vote
+    tag: pr-86-random-vote-change-28-7a550fd

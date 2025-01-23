@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AnalysisTemplate
+metadata:
+  name: container-restarts-{{ .Chart.Name }}
+spec:
+  args:
+    # This is set in rollout using the valueFrom: podTemplateHashValue functionality
+    - name: canary-hash
+    - name: service-name
+    - name: restarts.initial-delay
+      value: "60s"
+    - name: restarts.max-restarts
+      value: "1"
+  metrics:
+    - name: kubernetes.containers.restarts
+      initialDelay: "{{ `{{args.restarts.initial-delay}}` }}"
+      interval: 15s
+      failureCondition: default(result, 0) > {{ `{{args.restarts.max-restarts}}` }}
+      failureLimit: 0
+      provider:
+        datadog:
+          apiVersion: v1
+          interval: 3m
+          query: "{{ `max:kubernetes.containers.restarts{kube_service:{{args.service-name}}}` }}"
