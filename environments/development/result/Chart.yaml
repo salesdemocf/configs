@@ -13,6 +13,6 @@ maintainers:
   - name: Dustin Van Buskirk
     email: dustin@codefresh.io
 dependencies:
-  - name: worker
+  - name: result
     version: "1.2.0"
     repository: file://../../../charts/result
