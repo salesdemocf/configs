@@ -25,4 +25,3 @@ dependencies:
     condition: redis.enabled
     tags:
       - queue
-appVersion: 1.2.0
