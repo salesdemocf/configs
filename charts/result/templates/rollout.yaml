@@ -44,7 +44,6 @@ spec:
       analysis:
         templates:
         - templateName: curl-{{ .Chart.Name }}
-        - templateName: container-restarts-{{ .Chart.Name }}
         args:
         - name: service-name
           value: {{ template "fullname" . }}-preview
