@@ -1,4 +1,4 @@
 worker:
   image:
-    repository: docker.io/salesdemocf/worker
+    repository: docker.io/salesdemocf/worke3
     tag: 1.0.0
