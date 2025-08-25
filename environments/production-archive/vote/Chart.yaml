@@ -15,5 +15,5 @@ maintainers:
     email: dustin@codefresh.io
 dependencies:
   - name: vote
-    version: 1.2.0
+    version: 1.2.1
     repository: file://../../../charts/vote
