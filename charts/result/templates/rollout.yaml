@@ -61,7 +61,6 @@ spec:
       - setWeight: 60
       - pause: {duration: 10}
       - setWeight: 80
-      - pause: {duration: 300}
       # trafficRouting:
       #   alb:
       #     ingress: {{ template "fullname" . }}
